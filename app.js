@@ -8,7 +8,7 @@ import pageVitalsRoute from "./routes/PageVitalRoutes.js";
 import axios from 'axios';
 
 import pkg from 'mongoose';
-import ServerlessHttp from "serverless-http";
+// import ServerlessHttp from "serverless-http";
 const { connect, connection } = pkg;
 //configure mongoose
 // connect(process.env.MONGODB_URI || "mongodb://localhost:27017", {
