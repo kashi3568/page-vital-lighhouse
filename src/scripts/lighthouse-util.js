@@ -1,6 +1,7 @@
 // const lighthouse  = require("lighthouse"); // This should be at the top of the file
 import lighthouse from "lighthouse";
 import puppeteer from "puppeteer";
+
 export const createBrowser = () => {
    return puppeteer.launch({
      args: ["--show-paint-rects"] // Required by lighthouse
