@@ -1,5 +1,5 @@
-const express = require("express");
-const serverless = require("serverless-http");
+import express from "express";
+import serverless from "serverless-http";
 
 // Create an instance of the Express app
 const app = express();
@@ -18,5 +18,5 @@ router.get("/", (req, res) => {
 app.use(`/.netlify/functions/api`, router);
 
 // Export the app and the serverless function
-module.exports = app;
-module.exports.handler = serverless(app);
+export default app;
+export const handler = serverless(app);
