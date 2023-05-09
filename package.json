@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "test": "mocha --timeout 10000"
+    "test": "mocha --timeout 10000",
+    "start": "netlify dev"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +21,7 @@
     "lighthouse": "^10.2.0",
     "moment": "^2.29.4",
     "mongoose": "^7.0.3",
+    "netlify": "^13.1.5",
     "node-cron": "^3.0.2",
     "node-fetch": "^3.3.1",
     "puppeteer": "^20.1.1"
@@ -30,5 +31,5 @@
     "chai-http": "^4.3.0",
     "mocha": "^10.2.0"
   },
-  "type":"module" 
+  "type": "module"
 }
