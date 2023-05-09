@@ -1,6 +1,6 @@
 import express from "express";
 import serverless from "serverless-http";
-import { generateLightHouseReport } from "../scripts/genrateLightHouseReport.js";
+import { generateLightHouseReport } from "./scripts/genrateLightHouseReport.js";
 
 // Create an instance of the Express app
 const app = express();
