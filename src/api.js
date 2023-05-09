@@ -1,5 +1,6 @@
 import express from "express";
 import serverless from "serverless-http";
+import { generateLightHouseReport } from "../scripts/genrateLightHouseReport";
 
 // Create an instance of the Express app
 const app = express();
@@ -14,6 +15,20 @@ router.get("/", (req, res) => {
   });
 });
 
+
+router.get("/data", async (req, res) => {
+
+    try {
+        let response = await generateLightHouseReport();
+        console.log('finished')
+        res.json({ data: JSON.parse(response), status: "success" });
+      } catch (err) {
+        res.status(500).json({ error: err.message });
+      }
+    // res.json({
+    //   hello: "hi!"
+    // });
+  });  
 // Use the router to handle requests to the `/.netlify/functions/api` path
 app.use(`/.netlify/functions/api`, router);
 
